@@ -1,0 +1,100 @@
+<header id="masterhead" role="banner">
+  <div class="container">
+    <a id="brand" rel="home" href="<?php echo smart_siteurl() ?>">
+        <h1><?php echo bloginfo("title"); ?></h1>
+        <h2><?php echo bloginfo("description"); ?></h2>
+    </a>
+    <button id="primary-nav-toggle" class="btn btn-small btn-navbar hidden-desktop"><span class="bars"><span></span><span></span><span></span></span> <strong>Menu</strong></button>
+    <div class="full-nav">
+      <div class="visible-desktop">
+      <?php if (function_exists('relevanssi_do_query')) { ?>
+      <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+        <label>
+          <input type="search" class="search-field input-medium" placeholder="<?php _e('Search','smartportal') ?>" value="" name="s" title="Search for:" />
+        </label>
+      </form>
+      <?php } ?>
+      <?php $secondaryNavArgs = array(
+        'depth'           => 1,
+        'theme_location'  => 'secondary-nav', 
+        'container_class' => 'secondary-nav', 
+        'menu_class'      => 'nav nav-inline',
+        'menu_id'         => 'menu-secondary-nav'
+      ); ?>
+      <?php wp_nav_menu( $secondaryNavArgs ) ?>
+      </div>
+      <?php 
+      $walker = new Walker_Primary_Nav;
+      $args = array(
+        'theme_location'  => 'primary',
+        'menu'            => '', 
+        'container'       => 'nav', 
+        'container_class' => 'clearfix', 
+        'container_id'    => 'primary-nav',
+        'menu_class'      => 'nav', 
+        'menu_id'         => '',
+        'echo'            => true,
+        'fallback_cb'     => false,
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '',
+        'link_after'      => '',
+        'items_wrap'      => '<ul class="nav">%3$s</ul>',
+        'depth'           => 1
+      );
+      
+      wp_nav_menu($args);
+      ?>
+      <div class="hidden-desktop">
+      <?php $secondaryNavArgs = array(
+        'depth'           => 1,
+        'theme_location'  => 'secondary-nav', 
+        'container_class' => 'secondary-nav', 
+        'menu_class'      => 'nav nav-inline',
+        'menu_id'         => 'menu-secondary-nav'
+      ); ?>
+      <?php wp_nav_menu( $secondaryNavArgs ) ?>
+      </div>
+      
+      <div class="mobile-languages hidden-desktop">
+      <?php
+        $region = get_option('country_code') ? get_option('country_code') : '';
+        $flag = $region ? $region : 'eu';
+        $siteurl = smart_siteurl();
+      ?>
+      
+      <?php if($region == 'be'){ ?><i class="iconflag-be"></i><span class="country-name">Belgium</span><?php } ?>
+      <?php if($region == 'de'){ ?><i class="iconflag-de"></i><span class="country-name">Germany</span><?php } ?>
+      <?php if($region == 'dk'){ ?><i class="iconflag-dk"></i><span class="country-name">Denmark</span><?php } ?>
+      <?php if($region == 'fr'){ ?><i class="iconflag-fr"></i><span class="country-name">France</span><?php } ?>
+      <?php if($region == 'ib'){ ?><i class="iconflag-ib"></i><span class="country-name">Spain</span><?php } ?>
+      <?php if($region == 'it'){ ?><i class="iconflag-it"></i><span class="country-name">Italy</span><?php } ?>
+      <?php if($region == 'nl'){ ?><i class="iconflag-nl"></i><span class="country-name">Nederlands</span><?php } ?>
+      <?php if($region == 'at'){ ?><i class="iconflag-at"></i><span class="country-name">Austria</span><?php } ?>
+      <?php if($region == 'sw'){ ?><i class="iconflag-sw"></i><span class="country-name">Sweden</span><?php } ?>
+      <?php if($region == 'uk'){ ?><i class="iconflag-uk"></i><span class="country-name">United Kingdom</span><?php } ?>
+      <?php if($region == 'eu'){ ?><i class="iconflag-eu"></i><span class="country-name">Europe</span><?php } ?>
+      
+      <?php
+      if (function_exists('icl_get_languages')) {
+        $languages = icl_get_languages('skip_missing=0&orderby=code');
+        
+        if(!empty($languages)){
+          echo '<select onchange="javascript:location.href = this.value;">';
+          foreach($languages as $l){
+            $class = '';
+            if($l['active']) $class = 'selected';
+            echo '<option value="'.$l['url'].'"' . $class . '>';
+            echo $l['language_code'];
+            echo '</option>';
+          }
+          echo '</select>';
+        }
+      }
+      ?>
+      </div>
+    </div>
+    <div class="site-overlay"></div>
+
+  </div>
+</header>

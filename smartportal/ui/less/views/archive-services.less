@@ -1,0 +1,144 @@
+#services-home {
+  
+  .page-leader{
+    text-align: center;
+    margin-bottom: @baseLineHeight * 2;
+    
+    @media (max-width: 767px){
+      margin-bottom: @baseLineHeight * 1.25;
+    }
+  }
+  
+  .services-list-expanded{
+
+    .service-category{
+      background: 60px top no-repeat;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      position: relative;
+    }
+  
+    .service-category-title{
+      font-size: 32px;
+      font-weight: 500;
+      line-height: @baseLineHeight * 1.5;
+      margin-top: 0;
+      margin-bottom: @baseLineHeight * 0.5;
+    }
+  
+    .service-category-desc{
+      color: @grayDark;
+      font-size: 16px;
+      line-height: @baseLineHeight;
+      margin-bottom: 18px;
+    }
+    
+    .service-category-img {
+      position: absolute;
+      left: @gridGutterWidth;
+      top: 0;
+      max-width: @gridColumnWidth * 4 + @gridGutterWidth * 3;
+    }
+  
+    .services-list {
+      margin-bottom: -24px;
+    }
+  
+    .single-service{
+      list-style: none;
+      margin-bottom: 18px;
+      padding: 0;
+  
+      &:nth-child(odd){
+        clear: left; 
+      }
+      
+    }
+   
+    .service-title{
+      color: @smartred;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: @baseLineHeight;
+      margin: 0 0 14px 0;
+    }
+  
+    .service-excerpt{
+      color: @black;
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 0;
+    }
+  
+    .read-more{
+      color: @black;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    
+    @media (min-width: 768px) and (max-width: 979px){
+      .service-category-img{
+        width: 200px;
+        left: 20px;
+      }
+    }
+        
+  }
+  
+  @media (max-width: 767px){
+    .page-leader{
+      margin-bottom: @baseLineHeight * 1.25;
+    }
+    .services-list-expanded{
+      .service-category{
+        margin: 18px 0 30px 0;
+      }
+    }
+  }
+}
+
+#services{
+
+	.page-leader{
+
+		.offset3{
+			border-bottom: 1px solid @grayLighter;
+		}
+	
+	}
+
+	h1{
+		margin-bottom: @baseLineHeight * 0.66;
+	}
+
+	.nav-chevron>li:first-child.current-page-ancestor > a{
+		color: @black;
+	}
+
+	.nav-chevron>li:first-child.current-page-ancestor.active > a{
+		color: @smartred;
+	}
+
+	.current-page-ancestor, .current-page-item, .current-menu-item{
+		
+		.sub-menu{
+			display: block;
+		}
+	}
+
+	&.article{
+		aside{
+			ul>a{
+				text-decoration: none;
+				font-size: @baseFontSize * 0.86;
+				color: @smartred;
+				font-weight: 500;
+
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+}

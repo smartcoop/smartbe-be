@@ -1,0 +1,83 @@
+/*!
+ * Smartstrap v0.5.0
+ *
+ * Copyright 2014 Central Design
+ * SMartstrap is a design and code framework developed to support the design
+ * and programming of any SMart website or online application. 
+ * SMartstrap is derivated from Twitter Bootstrap.
+ *
+ * For more informations please consult: http://ux.smart-eu.org
+ *
+ * Design and built pa
+ ssionately in Belgium by Central for SMart:
+ * http://centraldesign.be
+ * http://twitter.com/centraldesign
+ *
+ */
+ 
+// CSS Reset
+@import "reset.less";
+
+// Core variables and mixins
+@import "variables.less"; // Load SMartstrap variables
+@import "mixins.less";
+
+// Grid system and page structure
+@import "scaffolding.less";
+@import "grid.less";
+@import "layouts.less";
+
+// Base CSS
+@import "type.less";
+@import "code.less";
+@import "forms.less";
+@import "tables.less";
+
+// components: FONTS
+@import "fonts.less";
+
+// Components: common
+@import "sprites.less";
+@import "dropdowns.less";
+@import "wells.less";
+@import "component-animations.less";
+@import "close.less";
+
+// Components: Buttons & Alerts
+@import "buttons.less";
+@import "button-groups.less";
+@import "alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+
+// Components: Nav
+@import "navs.less";
+@import "navbar.less";
+@import "breadcrumbs.less";
+@import "pagination.less";
+@import "pager.less";
+
+// Components: Popovers
+@import "modals.less";
+@import "tooltip.less";
+@import "popovers.less";
+
+// Components: Misc
+@import "thumbnails.less";
+@import "labels-badges.less";
+@import "progress-bars.less";
+@import "accordion.less";
+@import "carousel.less";
+@import "hero-unit.less";
+@import "avatars.less";
+
+// Load SMart specific styles
+@import "smart.less"; // Our additions to the Bootstrap framework
+//* Add SMart own elements here 
+
+// Responsive - We go responsive by default ?
+@import "responsive.less";
+
+// Utility classes
+@import "responsive-utilities.less";
+@import "utilities.less"; // Has to be last to override when necessary
+
+  

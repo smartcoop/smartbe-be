@@ -1,0 +1,122 @@
+<?php
+	if (ICL_LANGUAGE_CODE=='nl'){
+		$lg='nl';
+		$emploi_titre='Werken bij Smart';
+		$toutes_les_offres='Alle vacatures van Smart';
+		$offre_emploi='Werkaanbieding';
+		$offre_stage='Stage';
+		$apprentissage='Duaal leren';
+		$ville='In ';
+		$offre_permanente_oui='PERMANENT AANBOD';
+		$details_offre='Functieomschrijving';
+		$date_mise_ligne='Datum van de onlinepublicatie ';
+		$description_offre='Taken';
+		$profil_label='Profiel';
+		$nous_offrons_label='Ons aanbod';
+		$interesse='Interesse';
+		$toutes_offres='Alle vacatures';
+		$partager='Delen'; 
+		$services='Onze diensten';
+		$formations='Onlineopleiding';
+		$formations_link='/nl/formations-a-distance/';
+		$nos_formations='';
+		$nos_formations_link='';
+		$formation_distance='';
+		$formation_distance_link='';
+		$type_formation_distance='Onlineopleiding';
+		$formations_partenaire='';
+		$formations_partenaire_link='';
+		$renseignements='';
+		$renseignements_link='';
+		$intro='37 opleidingen in het Nederlands, Frans en Engels, die je kan volgen vanuit je zetel! De ideale gelegenheid om nieuwe kennis op te doen en je competenties aan te scherpen!';
+		$programmee_le='Datum(s):  ';
+		$type_formation_distance='Onlineopleiding';
+		$detail_formation='Details van de opleiding';
+		$je_suis_interesse='Ik ben geïnteresseerd';
+		$je_minscris='Inschrijven';
+		$objectifs_label  ='Doelstellingen';
+		$contenus='Inhoud van de opleiding';
+		$informations='Praktische informatie';
+		$formateur='Opleider';
+		$modalites='';
+		$prix_label='Prijs';
+		$sur_demande='Op aanvraag';
+		$toutes_formations='Alle onlineopleidingen';
+		$toutes_formations_link='/nl/formations-a-distance';
+	}else if (ICL_LANGUAGE_CODE=='en'){
+		$partager='Share'; 
+		$services='Our services';
+		$formations='Training courses';
+		$formations_link='/en/formations-a-distance/';
+		$nos_formations='';
+		$nos_formations_link='';
+		$formation_distance='';
+		$formation_distance_link='';
+		$type_formation_distance='Online training course';
+		$formations_partenaire='';
+		$formations_partenaire_link='';
+		$renseignements='';
+		$renseignements_link='';
+		$intro='37 training sessions available (in English, French and Dutch)… from the comfort of your own home!';
+		$programmee_le='Course date(s):';
+		$type_formation_distance='Online training course';
+		$detail_formation='Course details';
+		$je_suis_interesse='I’m interested';
+		$je_minscris='Register';
+		$objectifs_label ='Objectives';
+		$contenus='Course contents';
+		$informations='Useful information';
+		$formateur='Trainer';
+		$prix_label='Price';
+		$sur_demande='On demands';
+		$modalites='';
+		$toutes_formations='All online training courses';
+		$toutes_formations_link='/en/formations-a-distance';
+	}else if (ICL_LANGUAGE_CODE=='de'){
+		
+	}else{			
+		$emploi_titre='Emploi';
+		$toutes_les_offres='Toutes les offres d\'emploi Smart';
+		$offre_emploi='Offre d\'emploi';
+		$offre_stage='Offre de stage';
+		$apprentissage='Apprentissage';
+		$ville='Basé à ';
+		$offre_permanente_oui='OFFRE PERMANENTE';
+		$details_offre='Détail de l\'offre';
+		$date_mise_ligne='Date de la mise en ligne ';
+		$description_offre='Description du poste';
+		$profil_label='Profil';
+		$nous_offrons_label='Nous offrons';
+		$interesse='Intéressé.e.s';
+		$toutes_offres='Toutes les offres d\'emplois';
+		$partager='Partager';
+		$services='Services';
+		$formations='Formations';
+		$formations_link='/fr/nos-services/formations/';
+		$nos_formations='Nos formations';
+		$nos_formations_link='/fr/?post_type=formation';
+		$formation_distance='Nos formations à distance';
+		$formation_distance_link='/fr/formations-a-distance';
+		$type_formation_distance='Formation à distance';
+		$formations_partenaire='Formations de nos partenaires';
+		$formations_partenaire_link='/fr/nos-services/formations/formations-de-nos-partenaires/';
+		$renseignements='Renseignements, modalités d’inscription et d’annulation';
+		$renseignements_link='';
+		$intro='37 formations à suivre depuis… chez vous (en français, néerlandais et anglais)! L’occasion pour vous de (re)découvrir de nouveaux domaines et de monter en compétences !';
+		$programmee_le='Programmée le(s) : ';
+		$detail_formation='Détail de la formation';
+		$je_suis_interesse='Je suis intéressé.e';
+		$je_minscris='Je souhaite  m\'inscrire';
+		$objectifs_label  ='Objectifs';
+		$contenus='Contenu de la formation';
+		$informations='Informations pratiques';
+		$formateur='Formateur.trice';
+		$modalites='Modalités d\'inscription et d\'annulation';
+		$toutes_formations='Toutes les formations';
+		$toutes_formations_link='/fr/?post_type=formation';
+		$sur_demande='Sur demande';
+		
+		
+	}
+	
+?>

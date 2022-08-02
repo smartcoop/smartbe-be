@@ -1,0 +1,144 @@
+/* Cerebri Sans Light */
+@font-face {
+    font-family: 'cerebri_sans';
+    src: url('../fonts/cerebri_sans/woff2/cerebri_sans--light.woff2') format('woff2'),
+         url('../fonts/cerebri_sans/woff/cerebri_sans--light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Cerebri Sans Light Italic */
+@font-face {
+    font-family: 'cerebri_sans';
+    src: url('../fonts/cerebri_sans/woff2/cerebri_sans--light-italic.woff2') format('woff2'),
+         url('../fonts/cerebri_sans/woff/cerebri_sans--light-italic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Cerebri Sans Regular */
+@font-face {
+    font-family: 'cerebri_sans';
+    src: url('../fonts/cerebri_sans/woff2/cerebri_sans.woff2') format('woff2'),
+         url('../fonts/cerebri_sans/woff/cerebri_sans.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Cerebri Sans Italic */
+@font-face {
+    font-family: 'cerebri_sans';
+    src: url('../fonts/cerebri_sans/woff2/cerebri_sans--italic.woff2') format('woff2'),
+         url('../fonts/cerebri_sans/woff/cerebri_sans--italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Cerebri Sans Book */
+@font-face {
+    font-family: 'cerebri_sans';
+    src: url('../fonts/cerebri_sans/woff2/cerebri_sans--book.woff2') format('woff2'),
+         url('../fonts/cerebri_sans/woff/cerebri_sans--book.woff') format('woff');
+    font-weight: 450;
+    font-style: normal;
+}
+
+/* Cerebri Sans Book Italic */
+@font-face {
+    font-family: 'cerebri_sans';
+    src: url('../fonts/cerebri_sans/woff2/cerebri_sans--book-italic.woff2') format('woff2'),
+         url('../fonts/cerebri_sans/woff/cerebri_sans--book-italic.woff') format('woff');
+    font-weight: 450;
+    font-style: italic;
+}
+
+/* Cerebri Sans Medium */
+@font-face {
+    font-family: 'cerebri_sans';
+    src: url('../fonts/cerebri_sans/woff2/cerebri_sans--medium.woff2') format('woff2'),
+         url('../fonts/cerebri_sans/woff/cerebri_sans--medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Cerebri Sans Medium Italic */
+@font-face {
+    font-family: 'cerebri_sans';
+    src: url('../fonts/cerebri_sans/woff2/cerebri_sans--medium-italic.woff2') format('woff2'),
+         url('../fonts/cerebri_sans/woff/cerebri_sans--medium-italic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Cerebri Sans Semibold */
+@font-face {
+    font-family: 'cerebri_sans';
+    src: url('../fonts/cerebri_sans/woff2/cerebri_sans--semibold.woff2') format('woff2'),
+         url('../fonts/cerebri_sans/woff/cerebri_sans--semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Cerebri Sans Semibold Italic */
+@font-face {
+    font-family: 'cerebri_sans';
+    src: url('../fonts/cerebri_sans/woff2/cerebri_sans--semibold-italic.woff2') format('woff2'),
+         url('../fonts/cerebri_sans/woff/cerebri_sans--semibold-italic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* Cerebri Sans Bold */
+@font-face {
+    font-family: 'cerebri_sans';
+    src: url('../fonts/cerebri_sans/woff2/cerebri_sans--bold.woff2') format('woff2'),
+         url('../fonts/cerebri_sans/woff/cerebri_sans--bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Cerebri Sans Bold Italic */
+@font-face {
+    font-family: 'cerebri_sans';
+    src: url('../fonts/cerebri_sans/woff2/cerebri_sans--bold-italic.woff2') format('woff2'),
+         url('../fonts/cerebri_sans/woff/cerebri_sans--bold-italic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Cerebri Sans Extrabold */
+@font-face {
+    font-family: 'cerebri_sans';
+    src: url('../fonts/cerebri_sans/woff2/cerebri_sans--extrabold.woff2') format('woff2'),
+         url('../fonts/cerebri_sans/woff/cerebri_sans--extrabold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* Cerebri Sans Extrabold Italic */
+@font-face {
+    font-family: 'cerebri_sans';
+    src: url('../fonts/cerebri_sans/woff2/cerebri_sans--extrabold-italic.woff2') format('woff2'),
+         url('../fonts/cerebri_sans/woff/cerebri_sans--extrabold-italic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* Cerebri Sans Heavy */
+@font-face {
+    font-family: 'cerebri_sans';
+    src: url('../fonts/cerebri_sans/woff2/cerebri_sans--heavy.woff2') format('woff2'),
+         url('../fonts/cerebri_sans/woff/cerebri_sans--heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Cerebri Sans Heavy Italic */
+@font-face {
+    font-family: 'cerebri_sans';
+    src: url('../fonts/cerebri_sans/woff2/cerebri_sans--heavy-italic.woff2') format('woff2'),
+         url('../fonts/cerebri_sans/woff/cerebri_sans--heavy-italic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+

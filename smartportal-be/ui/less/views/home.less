@@ -1,0 +1,78 @@
+
+/** ROW: NEWS BELGIUM **/
+
+#front-page-row-news-be {
+  margin-top: @baseLineHeight * 2;
+  margin-bottom: @baseLineHeight * 2;
+  
+  @media (max-width: 767px) {
+    margin-top: @baseLineHeight;
+    margin-bottom: -@baseLineHeight;
+  }
+  
+  h3{
+    margin-top: -@baseLineHeight * 0.25; 
+  }
+  
+  .fb-like-box{
+    margin-bottom: 0;
+  }  
+  
+}
+
+
+/** ROW: DISCOVER **/
+
+#front-page-row-discover {
+  margin-top: @baseLineHeight * 2;
+  margin-bottom: @baseLineHeight * 1.75;
+  
+  @media (max-width: 767px){ 
+    margin-top: @baseLineHeight * 1;
+    margin-bottom: @baseLineHeight * 0;
+  }
+  
+  #discover {
+    margin: 0 auto;
+    float: none;
+    
+    ul {
+      list-style: none;
+    }
+    
+    @media (max-width: 767px){ 
+      li{
+        max-width: 320px;
+        margin: 0 auto; 
+      }
+    }
+  
+    img {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      border: 1px solid #DDD;
+      box-shadow: 0 0 2px #E7E7E7;
+      margin: (@baseLineHeight * 0.5) 0;
+    }
+    
+    h3{
+      margin-top: -@baseLineHeight / 4;
+      margin-bottom: @baseLineHeight / 2; 
+    }
+    
+    h4 {
+      color: @smartred;
+      font-weight: 500;
+      font-size: 16px;
+      margin-bottom: @baseLineHeight * 0.25;
+    }
+
+    p {
+      color: @black;
+      font-size: 14px;
+    }
+
+  }
+  
+}

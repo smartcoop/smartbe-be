@@ -1,0 +1,291 @@
+/*!
+ * View: Project single
+ *
+ * Styling for a project page
+ *
+ */
+ 
+body.single-project{
+
+  /* Put specific styles here */
+  
+  /* Active Nav */
+  #masterhead .primary-nav-item-projects > a > span{
+    color: @smartred !important;
+  }
+  
+  #project-icon{
+    text-align: center;
+
+    img{
+      height: auto;
+    }
+  }
+  
+  #project-status{
+    header{
+      margin-bottom: @baseLineHeight / 4;
+    }
+    dl{
+      .clearfix;
+      font-size: 11px;
+      line-height: @baseLineHeight * 1.5;
+      margin-top: 0;
+      border: 1px solid @grayLighter;
+      .border-radius(6px);
+      dt{
+        border-top: 1px solid @grayLighter;
+        text-transform: uppercase;
+        line-height: inherit;
+        padding-left: 6px;
+        &:before{
+          content: "";
+          display: inline-block;
+          background: red;
+          width: 8px;
+          height: 8px;
+          margin-right: 3px;
+          vertical-align: 0px;
+          .border-radius(50%);
+        }
+        &:first-child{
+          border-top: 0;
+        }
+      }
+      dt.operational:before{background: @green;}
+      dt.in-progress:before{background: @yellow;}
+      dt.preliminary:before{background: @gray;}
+      dd{
+        padding-right: 6px;
+        margin-left: 150px;
+        margin-top: -(@baseLineHeight * 1.5) - 1;
+        line-height: inherit;
+        .clearfix;
+        > span{
+          float: left;
+        }
+        > .progress{
+          float: right;
+          vertical-align: middle;
+          width: 60px;
+          margin-top: 15px;
+          margin-bottom: 0;
+          height: 8px;
+          .border-radius(8px);
+          > .bar{
+            height: 8px;
+            min-width: 8px;
+            .border-radius(8px);
+          }
+        }
+      }
+      dd+dd{
+        float: right;
+        .progress{
+          display: inline-block;
+          vertical-align: middle;
+          width: 50px;
+          margin-bottom: 0;
+          height: 8px;
+          .border-radius(8px);
+          > .bar{
+            height: 8px;
+            .border-radius(8px);
+            background: @yellow;
+          }
+        }
+      }
+    }
+  }
+  
+  #project-highlights{
+    margin: @baseLineHeight * 1.5 0;
+    ul{  
+      display: table;
+      list-style: none;
+      margin: 0;
+      text-align: center;
+      font-weight: 500;
+      color: white;
+      height: 185px;
+      font-size: 16px;
+      line-height: 22px;
+      width: 224px;
+      box-sizing: border-box;
+      margin: 0 auto;
+      li{
+        display: table-cell;
+        vertical-align: middle;
+        background: url(../img/project-highlight.png) no-repeat center center;
+        height: 185px;
+        padding: 0 30px;
+      }
+    }
+  }
+  
+  #project-links{
+    header{
+      margin: @baseLineHeight 0 @baseLineHeight * 0.25;
+    }
+    .nav{
+      list-style: none;
+      margin: 0;
+
+      li{
+        #font > .sans-serif(inherit, 500, @baseLineHeight);
+        margin-bottom: @baseLineHeight*0.25;
+        a{
+          color: @grayDark;
+        }
+      }
+    }  
+  }
+  
+  .styled.entry{
+    /* Images on full width can be larger (8 units) than than the text column (7 units) */
+    .size-full{
+      max-width: @gridColumnWidth * 8 + @gridGutterWidth * 7 !important;
+      width: auto !important;
+    }
+  }
+  
+  #more-projects{
+    margin: @baseLineHeight * 2 0 @baseLineHeight * 1.75;
+    text-align: center;
+    font-weight: 500;
+    #font > .sans-serif(30px, 300, 36px);
+  }
+  
+  #nav-projects{
+    margin: @baseLineHeight 0;
+    ul{
+      li{
+        padding-top: 0;
+        background: none;
+        margin-bottom: @baseLineHeight*0.25;
+        h2{
+          position: relative;
+          padding-bottom: 0;
+          font-size: 18px;
+          line-height: 18px;
+          padding: 12px 0 16px;
+          margin: 0;
+          font-weight: bold;
+          text-align: left;
+        }
+        p{
+          display: none;
+        }
+        ul{
+          margin-top: 0;
+        }
+      }    
+    }  
+  }
+}
+
+@media (max-width: 767px){
+  body.single-project{
+  
+    #content header.page-leader{
+      margin-bottom: @baseLineHeight;
+      h1{
+        margin-bottom: @baseLineHeight;
+      }
+    }
+    
+    #content .entry{
+      margin-bottom: @baseLineHeight * 1.5;
+    }
+
+    .styled.entry{
+      .size-full{
+        max-width: 100% !important;
+        width: auto !important;
+      }
+    }
+    
+    
+    #project-aside{
+      margin-top: -@baseLineHeight !important;
+    }
+    
+    #project-icon{
+      display: none;
+    }
+    
+    #more-projects, #nav-projects{
+      display: none;
+    }
+    
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+  #project-status{
+    header{
+      margin-bottom: 0;
+    }
+    dl{
+      .clearfix;
+      font-size: 11px;
+      line-height: @baseLineHeight * 1.5;
+      margin-top: 0;
+      dt{
+        text-transform: uppercase;
+        line-height: inherit;
+      }
+      dt.operational:before{background: @green;}
+      dt.in-progress:before{background: @yellow;}
+      dt.preliminary:before{background: @gray;}
+      dd{
+        margin-left: 130px !important;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        > .progress{
+          display: none;
+        }
+      }
+    }
+  }  
+}
+
+
+
+@media (max-width: 767px) {
+  body.single-project{
+    #content{
+      margin-bottom: -12px;
+
+      header{
+        text-align: center;
+      }
+    } 
+    #project-aside{
+      margin-top: 0;
+    }
+    #project-icon{
+      text-align: center;
+      img {
+        width: 50%;
+        max-width: 200px;
+      }
+    }
+    #more-projects{
+      color: @grayDarker;
+    }
+    #nav-projects{
+      margin-top: 0;
+      h2{
+        text-align: center;
+      }
+      ul{
+        margin-bottom: @baseLineHeight / 2;
+      }
+    }
+  }
+}

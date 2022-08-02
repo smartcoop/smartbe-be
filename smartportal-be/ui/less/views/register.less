@@ -1,0 +1,114 @@
+#register{
+
+	section{ 
+		display: block;
+		background: #FFF;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		box-shadow: 0 0 1px 1px #EEE;
+		margin-bottom: @baseLineHeight * 1.5;
+		overflow: hidden;
+
+		h2{
+			font-size: @baseFontSize * 1.46;
+			margin-bottom: @baseLineHeight * 1.2;
+			margin: @baseLineHeight*1.25 @baseLineHeight @baseLineHeight @baseLineHeight;
+		}
+
+        .list-chevron{
+  
+          list-style: none;
+  
+            li{
+                padding-left: 1em;
+                position: relative;
+                font-weight: normal;
+                margin-bottom: @baseLineHeight * 0.5;
+        
+                &:before{
+                    color: inherit;
+                    content: ">";
+                    display: inline-block;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                }
+  
+            }
+  
+        }
+  
+        .col-container {
+          margin-left: 24px;
+          margin-right: 24px;
+        }
+
+
+		footer{
+			margin-top: @baseLineHeight;
+
+			.nav{
+				margin-bottom: @baseLineHeight * 1.5;
+			}
+		}
+
+		ol{
+			margin-left: 0;
+			list-style: none;
+
+			li{
+				padding-left: 1.5em;
+				position: relative;
+
+				&:before{
+						display: inline-block;
+						left: 0;
+						position: absolute;
+						top: 0;
+						color: @smartred;
+						font-weight: 600;
+				}
+
+				&:first-child:before{
+					content: '1.';
+				}
+
+				&:nth-child(2):before{
+					content: '2.';
+				}
+
+				&:nth-child(3):before{
+					content: '3.';
+				}
+			}
+		}
+	
+	}
+
+	.btn{
+		margin-top: @baseLineHeight * 0.5;
+		padding: @baseLineHeight * 0.4 @baseLineHeight;
+	}
+
+	.secondary {
+      margin-bottom: @baseLineHeight * 2;
+      
+      a {
+		color: @gray;
+		font-size: @baseFontSize * 0.93;
+		font-weight: 600;
+		margin-top: @baseLineHeight * 0.25;
+		display: inline-block;
+      }
+	}
+
+	&>footer{
+		margin: @baseLineHeight * 1.5 auto;
+
+		a:before{
+			color: @black;
+		}
+	}
+
+}

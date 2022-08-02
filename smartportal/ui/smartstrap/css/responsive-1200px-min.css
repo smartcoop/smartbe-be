@@ -1,0 +1,40 @@
+/*
+@media (min-width: 1200px) {
+
+  // Fixed grid
+  #grid > .core(@gridColumnWidth1200, @gridGutterWidth1200);
+
+  // Fluid grid
+  #grid > .fluid(@fluidGridColumnWidth1200, @fluidGridGutterWidth1200);
+
+  // Input grid
+  #grid > .input(@gridColumnWidth1200, @gridGutterWidth1200);
+
+  // Thumbnails
+  .thumbnails {
+    margin-left: -@gridGutterWidth1200;
+  }
+  .thumbnails > li {
+    margin-left: @gridGutterWidth1200;
+  }
+  .row-fluid .thumbnails {
+    margin-left: 0;
+  }
+
+  // Forms extra
+  .form-horizontal {
+    @horizontalComponentOffset1200 : @gridColumnWidth1200 * 2 + @gridGutterWidth1200 * 2;
+
+    .control-label{
+      width: @horizontalComponentOffset1200 - @gridGutterWidth1200;
+    }
+
+    .controls{
+      margin-left: @horizontalComponentOffset1200;
+      &:first-child {
+        *padding-left: @horizontalComponentOffset1200;
+      }
+    }
+  }
+}
+*/

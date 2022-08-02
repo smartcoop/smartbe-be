@@ -1,0 +1,95 @@
+<script>
+	function afficherId(nom_div) { 
+		if(document.getElementById(nom_div).style.display==="none") 	{
+			document.getElementById(nom_div).style.display="block"; 
+		}else  {
+			document.getElementById(nom_div).style.display="none";
+		} 
+	}
+</script>	
+<?php include('hp_trad.php');?>
+<header id="masterhead" role="banner">
+  <div >
+    
+    <button id="primary-nav-toggle" class="btn btn-small btn-navbar "><span class="bars"><span></span><span></span><span></span></span> <strong>Menu</strong></button>
+    <div class="full-nav">
+	<!-- BO Logos -->	
+		<div class="header_container_logo">
+			<a  rel="home" href="/"  >
+				<img src="https://smartbe.be/ressources/charte/logos/smart-logo--white-with-padding.svg" width="180px" height="auto"/>
+			</a>
+		</div>
+		<!-- EO Logos -->
+		<div class="float-right se-connecter visible-desktop" >
+			<div class="ft-s-s"><?php echo $espace_perso;?></div>
+			<a  class="bt_se_connecter" href="https://compte.smartfr.fr/smart.aspx">SE CONNECTER</a>
+		</div>
+		<div class="float-right header_switcher_lg">
+			 <?php
+			  if (function_exists('icl_get_languages')) {
+				  $languages = icl_get_languages('skip_missing=0&orderby=code');
+				  
+				  if(!empty($languages)){
+					echo '<ul id="smartbar-language" class="right">';
+					$first = true;
+					foreach($languages as $l){
+					  $class = '';
+					  if($l['active']) $class = 'active';
+					  if($first) $class .= " divider";
+					  echo '<li class="' . $class . '">';
+					  echo '<a title="'.$l['translated_name'].'" href="'.$l['url'].'">';
+					  echo $l['language_code'];
+					  echo '</a>';
+					  echo '</li>';
+					  $first = false;
+					}
+					echo '</ul>';
+				  }
+				}
+			  ?>
+		</div>
+		<div style="clear:both"></div>
+		<div class=" header_container-nav">			
+		
+			<nav role="navigation" class="main-nav visible-desktop" >
+				<?php 
+				  $walker = new Walker_Primary_Nav;
+				  $args = array(
+					'theme_location'  => 'primary',
+					'menu'            => '', 
+					'container'       => 'nav', 
+					'container_class' => 'clearfix', 
+					'container_id'    => 'primary-nav',
+					'menu_class'      => 'nav', 
+					'menu_id'         => '',
+					'echo'            => true,
+					'fallback_cb'     => false,
+					'before'          => '',
+					'after'           => '',
+					'link_before'     => '',
+					'link_after'      => '',
+					'items_wrap'      => '<ul class="nav">%3$s</ul>',
+					'depth'           => 1
+				  );
+				  
+				  wp_nav_menu($args);
+				  ?>
+			</nav>
+		</div>
+		<div class="visible-desktop">
+			<a onclick="afficherId('searchform');"><div class="icone-search">
+			</div></a>		
+		</div>
+	</div>	
+	<div style="clear:both"></div>
+  </div>
+  <?php if (function_exists('relevanssi_do_query')) { ?>
+		<div id="searchform" style="display:none;">
+			<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+				<label>
+				  <input type="search" class="search-field input-medium" placeholder="<?php _e('Search','smartportal') ?>" value="" name="s" title="Search for:" />
+				</label>
+			</form>
+		</div>
+  <?php } ?>
+</header>

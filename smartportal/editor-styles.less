@@ -1,0 +1,44 @@
+/*!
+ * Editor Styles
+ * Description: Used to style the Wordpress TinyMCE editor.
+ *
+ */
+
+// Import what we need from SMartstrap
+
+// CSS Reset
+@import "ui/smartstrap/less/reset.less";
+
+// Core variables and mixins
+@import "ui/smartstrap/less/variables.less"; // Load SMartstrap variables
+@import "ui/smartstrap/less/mixins.less";
+
+// Grid system and page structure
+@import "ui/smartstrap/less/scaffolding.less";
+
+// Base CSS
+@import "ui/smartstrap/less/type.less";
+
+// Specific styles
+@import "ui/smartstrap/less/smart-styled.less";
+
+// Utility classes
+@import "ui/smartstrap/less/utilities.less"; // Has to be last to override when necessary
+
+
+html .mceContentBody {
+	max-width: 610px;
+}
+
+body{
+  margin: 25px;
+  // Make our body loaded styles for child elements
+  // Caused compiling errors
+  // .styled;
+}
+
+/* Some adjustments */
+
+dd.wp-caption-dd{
+  margin-top: 5px;
+}

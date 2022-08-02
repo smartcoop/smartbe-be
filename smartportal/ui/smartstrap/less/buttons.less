@@ -1,0 +1,334 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+// Core
+.btn {
+  display: inline-block;
+  .ie7-inline-block();
+  padding: 4px 12px 5px 12px;
+  margin-bottom: 0; // For input.btn
+  font-size: @baseFontSize;
+  font-weight: 500;
+  line-height: @baseLineHeight+1;
+  *line-height: @baseLineHeight+1;
+  text-align: center;
+  text-decoration: none !important;
+  vertical-align: middle;
+  cursor: pointer;
+  .border-radius(4px);
+  
+  &:hover,
+  &:focus {
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+
+  &:active,
+  &.active {
+    color: #fff !important;
+    outline: 0;
+    background-image: none !important;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: default;
+    .opacity(.65);
+    .box-shadow(none);
+  }
+
+  &:focus {
+    .tab-focus();
+  }
+  
+  // Active state
+  &.active,
+  &:active {    
+    outline: 0;
+  }
+  
+  [class^="icon-"] {
+    vertical-align: 1px;
+    padding-right: 0px;
+  }
+  
+  &.btn-filled{
+    .buttonFilled();
+  }
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+// Large
+.btn-large {
+  padding: 8px 12px 10px 12px;
+  font-size: @baseFontSize + 3px;
+  line-height: normal;
+  .border-radius(5px);
+  [class^="icon-"], [class*="icon-"] {
+    font-size: 40px;
+    line-height: 19px;
+    vertical-align: 0px;
+    margin-right: 4px;
+  }
+}
+
+// Small
+.btn-small {
+  padding: 2px 6px 4px 6px;
+  font-size: @baseFontSize - 2px;
+  line-height: @baseLineHeight - 4px;
+  [class^="icon-"], [class*="icon-"] {
+    font-size: 28px;
+    vertical-align: -2px;
+    margin-right: 1px;
+  }
+}
+
+// Mini
+.btn-mini {
+  padding: 0px 6px 2px 6px;
+  font-size: @baseFontSize - 5px;
+  line-height: @baseLineHeight - 3px;
+  [class^="icon-"], [class*="icon-"] {
+    font-size: 24px;
+    vertical-align: -2px;
+    margin-right: 0px;
+  }
+}
+
+
+// Block button
+// -------------------------
+
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  .box-sizing(border-box);
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+// Set text color
+// -------------------------
+
+/* Backup original from SMartstrap
+.btn-primary,
+.btn-primary:hover,
+.btn-warning,
+.btn-warning:hover,
+.btn-danger,
+.btn-danger:hover,
+.btn-success,
+.btn-success:hover,
+.btn-info,
+.btn-info:hover,
+.btn-inverse,
+.btn-inverse:hover {
+  color: @white;
+  text-shadow: 0 1px 0 rgba(0,0,0,.25);
+}
+.btn-primary:hover,
+.btn-warning:hover,
+.btn-danger:hover,
+.btn-success:hover,
+.btn-info:hover,
+.btn-inverse:hover {
+  border-color: fadeout(@btnBorder, 58%) fadeout(@btnBorder, 56%) fadeout(@btnBorder, 45%);
+}
+*/
+
+/* Updated From Boostrap 2.1.1 */
+// Provide *some* extra contrast for those who can get it
+.btn-primary.active,
+.btn-warning.active,
+.btn-danger.active,
+.btn-success.active,
+.btn-info.active,
+.btn-inverse.active {
+  /* color: rgba(255,255,255,.75); */
+}
+
+// Set the backgrounds
+// -------------------------
+.btn {
+  .button(@btnDefault);
+  &.btn-loading {
+    .buttonFilled(@btnDefault);
+  }
+  &.btn-filled{
+    .buttonFilled(@btnDefault);
+  }
+}
+.btn-primary {
+  .button(@btnPrimary);
+  &.btn-loading {
+    .buttonFilled(@btnPrimary);
+  }
+  &.btn-filled{
+    .buttonFilled(@btnPrimary);
+  }
+}
+// Warning appears are orange
+.btn-warning {
+  .button(@btnWarning);
+  &.btn-loading {
+    .buttonFilled(@btnWarning);
+  }
+  &.btn-filled{
+    .buttonFilled(@btnWarning);
+  }
+}
+// Danger and error appear as red
+.btn-danger {
+  &.btn-loading {
+    .buttonFilled(@btnDanger);
+  }
+  .button(@btnDanger);
+  &.btn-filled{
+    .buttonFilled(@btnDanger);
+  }
+}
+// Success appears as green
+.btn-success {
+  .button(@btnSuccess);
+  &.btn-loading {
+    .buttonFilled(@btnSuccess);
+  }
+  &.btn-filled{
+    .buttonFilled(@btnSuccess);
+  }
+}
+// Info appears as a neutral blue
+.btn-info {
+  .button(@btnInfo);
+  &.btn-loading {
+    .buttonFilled(@btnInfo);
+  }
+  &.btn-filled{
+    .buttonFilled(@btnInfo);
+  }
+}
+// Inverse appears as dark gray
+.btn-inverse {
+  .button(@btnInverse);
+  &.btn-loading {
+    .buttonFilled(@btnInverse);
+  }
+  &.btn-filled{
+    .buttonFilled(@btnInverse);
+  }
+}
+
+
+
+// Cross-browser Jank
+// --------------------------------------------------
+
+button.btn,
+input[type="submit"].btn {
+
+  // Firefox 3.6 only I believe
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  // IE7 has some default padding on button controls
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+
+  &.btn-large {
+    *padding-top: 7px;
+    *padding-bottom: 7px;
+  }
+  &.btn-small {
+    *padding-top: 3px;
+    *padding-bottom: 3px;
+  }
+  &.btn-mini {
+    *padding-top: 1px;
+    *padding-bottom: 1px;
+  }
+}
+
+
+// Link buttons
+// --------------------------------------------------
+
+// Make a button look and behave like a link
+.btn-link,
+.btn-link:active,
+.btn-link[disabled],
+.btn-link.active {
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  .box-shadow(none);
+  color: @textColor !important;
+  text-decoration: underline !important;
+}
+.btn-link {
+  border-color: transparent;
+  cursor: pointer;
+  color: @linkColor;
+  .border-radius(0);
+}
+.btn-link:hover {
+  color: @linkColorHover;
+  background-color: transparent;
+  [class^="icon-"], [class*="icon-"] {
+    color: @linkColorHover !important; 
+  }
+}
+.btn-link:active{
+  color: @grayDark !important;
+}
+
+
+// Loading state buttons
+// --------------------------------------------------
+
+.btn-loading {
+
+  &:before{
+    display: inline-block;
+    content: " ";
+    background: url("../img/spinning-loader-buttons-white.svg") 0 no-repeat;
+    margin-right: 0.5em;
+    margin-bottom: -4px;
+    height: 18px;
+    width: 18px;
+    
+  }
+  > * {
+    display: none;
+  }
+}

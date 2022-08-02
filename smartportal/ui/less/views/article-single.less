@@ -1,0 +1,67 @@
+/*!
+ * SMart Master
+ *
+ * Default view for single article
+ */
+
+
+/* ? use body.single-post or body.single to target single articles ? */
+ 
+
+article {
+
+  .nav-latest-news {
+    margin-top: 0;
+    background: @white;
+    border-radius: 5px;
+    border: 1px solid lighten(@grayLighter, 5%);
+    
+    li {
+      padding: @baseLineHeight * 0.5 @baseLineHeight * 0.75;
+      border-top: 1px solid lighten(@grayLighter, 5%);
+      margin: 0;
+    }
+    
+    li a:link{
+      color: inherit;
+    }
+    li a:visited{
+      color: @grayDark;
+    }
+    
+    li.current a{
+      color: @smartred;
+    }
+    
+    li:first-child{
+      border-top: none;
+    }
+    
+  }
+  
+  .article > h1:first-child {
+    margin-top: 2px;
+  }
+  
+  .article > h2:first-child {
+    margin-top: 8px;
+  }
+  
+  .article > h3:first-child {
+    margin-top: 4px;
+  }
+  
+  .article > p:first-child,
+  .article > ul:first-child {
+    margin-top: 10px;
+  }
+  
+  .article > p.lead:first-child {
+    margin-top: 1px;
+  }
+  
+  .nav{
+    margin-top: @baseLineHeight * 0.5;
+  }
+  
+}

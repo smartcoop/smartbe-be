@@ -1,0 +1,64 @@
+.search {
+  #page-title {
+    margin-bottom: @baseLineHeight;
+    
+    .search-form {
+      margin-bottom: @baseLineHeight / 6;
+      position: relative;
+      
+      .search-field {
+        width: 100%;
+        height: 48px;
+        border-radius: 39px;
+        padding-left: 52px;
+        font-size: 24px;
+        border: 1px solid @grayLighter;
+        box-shadow: none;
+        margin-bottom: 0;
+      }
+      
+      &:after {
+        content: "\1F50D";
+        font-family: Entypo, Entypo-social;
+        font-size: 64px;
+        display: block;
+        line-height: 0.4;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+      }
+    }
+  }
+  .results-number {
+    font-size: @baseLineHeight * 2/3;
+    color: @grayLight;
+  }
+  
+  .blog-archive-list > .row {
+    margin-top: 0;
+  }
+  
+  article {
+    .page-leader {
+      margin-top: @baseLineHeight * 0.5;
+      margin-bottom: @baseLineHeight * 0.5;
+      
+      h1 {
+        font-weight: 500;
+        margin-bottom: 0;
+        font-size: @baseLineHeight;
+        line-height: @baseLineHeight * 1.25;
+      }
+      
+      .result-type {
+        color: @gray;
+        font-size: 13px;
+      }
+      
+    }
+    strong {
+      font-weight: inherit;
+      background: #f8e8a7;
+    }
+  }
+}

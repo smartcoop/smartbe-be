@@ -1,0 +1,107 @@
+<!-- PODS -->
+
+<div id="front-page-row-news-be">
+	<div class="row">
+	<h3><p align="center"><?php _e("Fils d'infos","smartbe") ?></p></h3>
+  	<!-- POD NEWS -->
+  	<div class="span4 news-list">
+  		<h3><?php _e("Actualité","smartbe") ?></h3>
+		<div class="well">
+  		<ul class="post-list">
+  			<?php 
+				if(ICL_LANGUAGE_CODE == "nl"):
+				$bannerNews = new WP_query(array('tag=Homebanners @nl'));
+				else:
+				$bannerNews = new WP_Query(array('tag=Homebanners'));
+			 	endif;
+				$ppp = 2  + count($bannerNews);
+
+  				$news =  new WP_Query(array('posts_per_page' => $ppp));
+  				if($news->have_posts()) : while($news->have_posts()) : $news->the_post();
+  			?>
+				<?php  $homenews = wp_get_post_tags( $post->ID );
+								
+				$display = "yes";
+					
+				
+				if (! empty($homenews)){
+					foreach ($homenews as $homenewsTags){
+					if ($homenewsTags->name == "Homebanners"||$homenewsTags->name == "Homebanners @nl"){
+					 		$display = "no";
+						
+						}
+					}  			
+				}
+				
+				 ?>
+				<?php if($display == "yes"){ ?>
+  				<li class="post-<?php echo $post->ID ?>">
+  					<a href="<?php the_permalink() ?>"><?php the_title() ?></a>
+  					<span class="date"><?php the_time(get_option('date_format')); ?></span>
+  				</li>
+			<?php }?>	
+  			<?php  endwhile; endif; ?>
+  		</ul>
+  		</div>
+  		<ul class="nav nav-chevron inline red">
+  			<li>
+  				<a href="<?php echo get_page_link( icl_object_id(1294,page,false,ICL_LANGUAGE_CODE) ); ?>"><?php _e("Toutes les actualités","smartbe"); ?></a>
+  			</li>
+  		</ul>
+		<!-- / POD NEWS -->
+		
+		<!-- POD NEWS BLOG POLITIQUE -->
+		<h3><?php _e("Le blog politique","smartbe") ?></h3>
+  		<div class="well">
+			<?php if(ICL_LANGUAGE_CODE == "nl"): ?>
+				<div class="feed-container" data-feed-url="http://blog.smartbe.be/nl/feed/" data-feed-entries-count="2"></div>
+			<?php else: ?>
+				<div class="feed-container" data-feed-url="http://blog.smartbe.be/feed/" data-feed-entries-count="2"></div>
+			<? endif; ?>
+		</div>
+      
+  		<ul class="nav nav-chevron inline red">
+  			<li>
+  		      <?php if(ICL_LANGUAGE_CODE == "nl"): ?>
+    		    <a href="http://blog.smartbe.be/nl/"><?php _e("Lire le blog politique","smartbe"); ?></a>
+              <?php else: ?>
+                <a href="http://blog.smartbe.be/"><?php _e("Lire le blog politique","smartbe"); ?></a>
+              <? endif; ?>
+  			</li>
+  		</ul>
+		<!-- / POD NEWS BLOG POLITIQUE -->
+		
+  	</div>
+  	
+    <hr class="page-divider visible-phone">
+    
+  	
+  	<div class="span4 news-list">
+	<h3>Twitter</h3>
+	 <?php if(ICL_LANGUAGE_CODE=='fr'): ?>
+		<a class="twitter-timeline" href="https://twitter.com/SMartBe_FR" data-widget-id="535395358541873152">Tweets de @SMartBe_FR</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+         <?php elseif(ICL_LANGUAGE_CODE=='nl'): ?>
+	
+		<a class="twitter-timeline" href="https://twitter.com/SMartBe_NL" data-widget-id="544519135909400576">Tweets by @SMartBe_NL</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+         <?php endif;?>
+
+		
+		
+  	</div>
+  	
+  	  	
+  	<!-- WIDGETS -->
+  	<div class="span4">
+     <div > <!-- class="widgets-col"  -->
+        <?php dynamic_sidebar('front-page-row-news-widgets'); ?>
+  	  </div>
+  	</div>  
+  	<!-- / WIDGETS -->
+	
+  </div>
+</div>

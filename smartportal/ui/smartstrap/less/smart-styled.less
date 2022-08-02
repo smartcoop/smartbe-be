@@ -1,0 +1,178 @@
+/*!
+ * Classes for styles raw text (for example blog article content)
+ * Adjust collapsing margins
+ * Responsive content
+ * 
+ */
+
+.article{
+  position: relative;
+  font-size: 16px;
+  line-height: @baseLineHeight + 2;
+  
+  & > *:first-child{
+    /* Remove margin on first element */
+    margin-top: 0;
+  }
+  
+  a{
+    text-decoration: underline;
+    &:link{
+      color: @smartred; 
+    }
+    &:visited{
+      color: mix(@smartred, @grayDarker, 60%); 
+    }
+  }
+  
+  h1{
+    font-size: 28px;
+    color: @black;
+    font-weight: 500;
+    line-height: @baseLineHeight * 1.5;
+    margin-bottom: @baseLineHeight * 1;
+    margin-top: @baseLineHeight * 1;
+  }
+  
+  h2{
+    margin-top: @baseLineHeight * 1;
+    margin-bottom: @baseLineHeight * 0.5;
+    line-height: @baseLineHeight * 1.25;
+    font-weight: 400;
+    font-size: 22px;
+    color: @smartred;
+  }
+  
+  h3, h4, h5, h6{
+    margin-top: @baseLineHeight / 2;
+  }
+  
+  .lead{
+    border-bottom: 1px solid @grayLighter;
+    padding-bottom: @baseLineHeight * 1.5;
+    margin-bottom: @baseLineHeight * 1.5;
+  }
+  
+  ul, ol, dl, p {
+    margin-top: @baseLineHeight / 2;
+  }
+  
+  ul li, ol li {
+    margin-bottom: @baseLineHeight / 4;
+  }
+
+  
+  // Images & Embeds
+  // ---------------
+  
+  // Sizing
+  
+  .size-full,
+  .size-large,
+  .size-medium,
+  .size-thumbnail{
+    margin: @baseLineHeight * 0.5 auto;
+  }
+  
+  .size-full{
+    max-width: 100% !important;
+    width: auto !important;
+  }
+  
+  .size-large{
+    max-width: 100% !important;
+    width: auto !important;
+  }
+  
+  .size-medium{
+    max-width: @gridColumnWidth * 4 + @gridGutterWidth * 3 !important;
+    width: auto !important;
+  }
+  
+  .size-thumbnail{
+    max-width: @gridColumnWidth * 2 + @gridGutterWidth * 1 !important;
+    width: auto !important;
+  }
+  
+  .wp-caption{
+    max-width: 100% !important;
+    width: auto !important;
+    padding: 0;
+    margin: @baseLineHeight auto;
+    
+    .wp-caption-text{
+      margin: 0;
+      color: @grayDark;
+      font-size: 11px;
+      line-height: @baseLineHeight * 0.75;
+      padding-top: @baseLineHeight * 0.25;
+    }
+    
+    img{
+      margin: 0;
+    }  
+  }
+  
+  // Alignement
+  
+  .aligncenter{
+    display: block;
+    margin: @baseLineHeight auto;
+    text-align: center;
+  }
+
+  .alignleft{
+    float: left;
+    margin-right: @gridGutterWidth;
+    margin-bottom: @baseLineHeight / 2;
+    margin-top: @baseLineHeight / 2 - 2;
+  }
+  
+  .alignright{
+    float: right;
+    margin-left: @gridGutterWidth;
+    margin-bottom: @baseLineHeight / 2;
+    margin-top: @baseLineHeight / 2 - 2;
+  }
+  
+  // Embeds
+  
+  iframe, embed, object{
+    margin: @baseLineHeight / 2 0;
+  }
+  .fluid-width-video-wrapper{
+    margin: @baseLineHeight 0;
+    iframe, embed, object{
+      margin: 0;
+    }
+  }
+  
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .article{
+    .size-medium{
+      max-width: 42px * 4 + 20px * 3 !important;
+      width: auto !important;
+    }
+    
+    .size-thumbnail{
+      max-width: 42px * 2 + 20px * 1 !important;
+      width: auto !important;
+    }
+  }
+
+}
+
+@media (max-width: 768px){
+
+  .size-full,
+  .size-large,
+  .size-medium,
+  .size-thumbnail{
+    width: auto;
+    max-width: 100%;
+  }
+
+}
+

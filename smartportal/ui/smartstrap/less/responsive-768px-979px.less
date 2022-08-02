@@ -1,0 +1,35 @@
+//
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+  // Fixed grid
+  #grid > .core(@gridColumnWidth768, @gridGutterWidth768);
+
+  // Fluid grid
+  #grid > .fluid(@fluidGridColumnWidth768, @fluidGridGutterWidth768);
+
+  // Input grid
+  #grid > .input(@gridColumnWidth768, @gridGutterWidth768);
+
+  // No need to reset .thumbnails here since it's the same @gridGutterWidth
+
+  // Forms extra
+  .form-horizontal {
+    @horizontalComponentOffset768 : @gridColumnWidth768 * 2 + @gridGutterWidth768 * 2;
+
+    .control-label{
+      width: @horizontalComponentOffset768 - @gridGutterWidth768;
+    }
+
+    .controls{
+      margin-left: @horizontalComponentOffset768;
+      &:first-child {
+        *padding-left: @horizontalComponentOffset768;
+      }
+    }
+  }
+
+}

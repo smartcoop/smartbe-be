@@ -1,0 +1,21 @@
+//
+// Avatars
+// --------------------------------------------------
+
+.avatar{
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  .square(@gridColumnWidth);
+
+  img{
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+    .border-radius(50px);
+  }
+}
+
+.user-avatar {
+  .border-radius(3px);
+}

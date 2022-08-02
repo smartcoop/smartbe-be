@@ -1,0 +1,32 @@
+/*!
+ * Transit file: Move rules to right file once ok.
+ */
+ 
+.pod{
+  margin-bottom: @baseLineHeight;
+  margin-top: @baseLineHeight;
+  > header{
+    border-top: 3px solid @textColor;
+    border-bottom: 1px solid @textColor;
+    margin-bottom: @baseLineHeight / 2;
+    padding-top: @baseLineHeight / 4;
+    padding-bottom: @baseLineHeight / 4 + 6;
+    #font > .sans-serif(18px, 500, @baseLineHeight * 1);
+    h1{
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+      margin: 0;
+      a{
+        &:hover{
+          text-decoration: none;
+        }
+        &:after{
+          content: " →";
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+}

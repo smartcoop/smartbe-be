@@ -1,0 +1,132 @@
+/*!
+ * View: Team
+ *
+ * Styling for the team page
+ *
+ */
+ 
+body.single-territorial-entity{
+
+  /* Put specific styles here */
+  
+  /* Active Nav */
+  #masterhead .primary-nav-item-team > a > span{
+    color: @smartred !important;
+  }
+  
+  nav.section-nav .nav{
+    margin-top: 0px !important;
+  }
+  
+  div.row > .span8{
+    > p{
+      margin-bottom: @baseLineHeight;
+    }
+  }
+
+  .team-details{
+    & > h1{
+      #font > .serif(36px, normal, @baseLineHeight*2);
+    }
+  }
+  
+  #team-select{
+    margin-top: -@baseLineHeight * 1.5;
+    margin-bottom: @baseLineHeight * 1;
+  }
+  
+  #team-members{
+    list-style: none;
+    margin-left: -@gridGutterWidth;
+    li{
+      margin-bottom: 30px;
+      &:nth-child(odd){
+        clear: left;
+      }
+      article{
+        > .portrait{
+          border-bottom: 3px solid @smartred;
+          display: block;
+          width: 100%;
+          color: @grayLight;
+          text-align: center;
+          vertical-align: center;
+          background: @grayLight;
+        }
+        > div{
+          border: 1px solid @offWhite;
+          padding-bottom: 12px;
+          > * {
+            padding: 0 @gridGutterWidth / 2;
+          }
+          hgroup{
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+            background: @offWhite;
+            h1{
+              font-size: 22px;
+              line-height: @baseLineHeight;
+              font-weight: bold;
+              padding-bottom: 6px;
+              margin: 0;
+            }
+            h2{
+              font-size: 13px;
+              line-height: @baseLineHeight;
+              margin: 0;
+              margin-top: -6px;
+            }
+          }
+          p{
+            margin: 0;
+            font-size: 14px;
+            margin-top: 0;
+          }
+          h3{
+            font-weight: bold;
+            font-size: 12px;
+            margin-top: 6px !important;
+            margin-bottom: 0 !important;
+            line-height: @baseLineHeight * 0.75;
+            color: @grayDark;
+            + p{
+              color: @grayDark;
+              font-size: 12px;
+              line-height: @baseLineHeight * 0.75;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  body.single-territorial-entity{
+    #team-members{
+       
+      margin-left: -20px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  body.single-territorial-entity{
+    #content{
+      padding-bottom: 0;
+    }
+    #team-members{
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 300px;
+      li{
+        margin-bottom: 20px;
+      }
+      li article > .portrait{
+        max-width: 360px !important;
+        min-width: auto;
+      }
+    }
+  }
+}

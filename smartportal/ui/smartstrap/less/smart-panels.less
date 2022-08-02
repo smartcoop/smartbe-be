@@ -1,0 +1,33 @@
+
+
+// SLIDING PANELS
+// --------------
+
+.slidingpanels{
+  position: relative;
+  width: 100%;
+  background: red;
+}
+
+.slidingpanels-item{
+  position: absolute;
+  width: 100%;
+
+  .transition(0.5s ease-out);
+
+  -webkit-transform: translate3d(-100%,0px,0px);
+  opacity: 0;
+  
+  &.current{
+    -webkit-transform: translate3d(0,0,0);
+    opacity: 1;
+  } 
+  &.current + .slidingpanels-item{
+    -webkit-transform: translate3d(100%,0px,0px);
+    opacity: 0;
+  } 
+  &.current + .slidingpanels-item + .slidingpanels-item{
+    -webkit-transform: translate3d(100%,0px,0px);
+    opacity: 0;
+  }  
+}

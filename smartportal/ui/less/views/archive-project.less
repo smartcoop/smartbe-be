@@ -1,0 +1,41 @@
+
+/*!
+ * View: Projects list
+ *
+ * Styling for the projects page
+ *
+ */
+ 
+body.post-type-archive-project{
+  // Put specific styles here
+	.page-leader{
+		text-align: center;
+    margin-bottom: 54px;
+	}
+	
+	
+	// Tablet
+	@media (min-width: 768px) and (max-width: 979px){
+	  .project-type{
+	    .background-size(200px auto);
+	    background-position: 20px 0;
+	  }
+	}
+	
+	
+	// Mobile
+	@media (max-width: 767px){
+    // Put specific styles here
+  	.page-leader{
+      margin-bottom: -12px;
+  	}
+  	
+  	.project-type{
+  	  margin-bottom: @baseLineHeight * 1.5;
+  	  h2{
+  	    margin-top: @baseLineHeight / 2;
+  	  }
+  	}
+	}
+}
+

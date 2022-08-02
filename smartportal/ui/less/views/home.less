@@ -1,0 +1,210 @@
+/*!
+ * View: Home
+ *
+ * Styling for the homepage
+ *
+ */
+
+/* SHARED ACCROSS ALL PAGE COMPONENTS */
+
+body.home {
+  
+  #masterhead{
+    margin-bottom: 0; 
+  }
+  
+  #content{
+    @media (min-width: 768px) {
+      margin-bottom: -@baseLineHeight;  
+    }
+    @media (min-width: 768px) and (max-width: 979px) {
+      margin-top: -@baseLineHeight * 1;  
+    }
+    @media (max-width: 767px) {
+      margin-bottom: @baseLineHeight * 1.5;  
+    }
+  }
+  
+  .home-title{
+    font-size: @baseLineHeight * 1.75;
+    font-weight: 500;
+    line-height: 1.05;
+    margin-bottom: @baseLineHeight * 1;
+  }
+  
+  @media (max-width: 767px) {
+    .home-title {
+      font-size: @baseLineHeight * 1.25;
+      margin-bottom: @baseLineHeight * 0.5;  
+    }
+  }
+  
+}
+
+/** ROW: HOME INTRO **/
+
+#front-page-row-intro {
+  
+  margin-top: @baseLineHeight * 2;
+  margin-bottom: @baseLineHeight * 2;
+  
+  @media (max-width: 767px){
+    margin-top: @baseLineHeight * 1;
+    margin-bottom: @baseLineHeight * 1;
+  }
+  
+  article{
+    margin-bottom: -@baseLineHeight * 1;
+    @media (max-width: 767px){
+      margin-bottom: @baseLineHeight;
+    }
+    
+    p {
+      font-weight: 400;
+    }
+    
+    .nav{
+      margin-bottom: @baseLineHeight * .5;
+    }
+    
+  }
+  
+  aside {
+    margin-bottom: 0;
+    
+    h2 {
+      margin-top: 0;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  
+    .nav-chevron {
+      margin: (@baseLineHeight * 0.5) 0 (@baseLineHeight * 0.25);
+    
+      > li {
+        font-size: 14px;
+        margin-bottom: @baseLineHeight * 0.25;
+      }
+    
+    }
+    
+  }
+  
+}  
+
+/** ROW: HOME TITLE **/
+
+#front-page-row-title {
+  margin-top: @baseLineHeight * 2;
+  margin-bottom: @baseLineHeight * 2;
+  
+  @media (max-width: 767px){
+    margin-top: @baseLineHeight * 1;
+    margin-bottom: @baseLineHeight * 1;
+  }
+}  
+
+/** ROW: HOME FOCUS CARDS **/
+
+#front-page-row-focus-cards {
+  margin-top: @baseLineHeight * 2;
+  margin-bottom: @baseLineHeight * 2;
+  
+  @media (max-width: 767px) {
+    margin-top: @baseLineHeight;
+    margin-bottom: @baseLineHeight;
+  }
+}
+
+
+/** ROW: HOME FOCUS CAROUSEL **/
+
+// To be added
+
+
+/** ROW: HOME SERVICES MENU **/
+
+#front-page-row-services-menu {
+  margin-top: @baseLineHeight * 2;
+  margin-bottom: @baseLineHeight * 1.5;
+  
+  @media (max-width: 767px) {
+    margin-top: @baseLineHeight * 1.5;
+    margin-bottom: @baseLineHeight * 0.75;
+  }
+}
+
+/** ROW: HOME SERVICES CATEGORIES **/
+
+#front-page-row-services-categories {
+  margin-top: @baseLineHeight * 2;
+  margin-bottom: @baseLineHeight * 1.5;
+  
+  @media (max-width: 767px) {
+    margin-top: @baseLineHeight * 1.25;
+    margin-bottom: -@baseLineHeight * 0.25;
+  }
+}
+
+/** ROW: HOME NEWS **/
+
+#front-page-row-news{
+  
+  margin-top: @baseLineHeight * 2;
+  margin-bottom: @baseLineHeight * 1;
+  
+  @media (max-width: 767px){
+    
+    margin-top: @baseLineHeight * 1.25;
+    margin-bottom: @baseLineHeight * 0;
+
+    hr{
+      margin: 0;
+    }
+     
+    .latest-news{
+      
+      h2{
+        text-align: center;
+        margin: 0 0 @baseLineHeight;
+      }
+      
+      .blog-post{
+        height: auto;
+        padding-bottom: @baseLineHeight;
+        margin-bottom: 20px;
+        &:nth-child(n+5){ // "n+5" and not "n+4" because n starts at 0
+          display: none;
+        }
+      }
+      
+      footer{
+        margin-top: @baseLineHeight / 2;
+      }
+      hr{
+        margin: 0;
+      }
+    }
+    
+    .widgets-col{
+      margin-top: @baseLineHeight * 1.25;
+      
+      /* Newsletter fix */
+      .input-append input[type=email]{
+        width: 185px !important;
+      }
+    } 
+    
+  }
+}
+
+/** ROW: WIDGETS **/
+
+.front-page-row-widgets {
+  margin: (@baseLineHeight * 2) 0;
+  @media (max-width: 767px){
+    margin: @baseLineHeight * 1.25 0;
+  }
+}

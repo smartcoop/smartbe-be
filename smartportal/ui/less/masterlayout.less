@@ -1,0 +1,76 @@
+/*!
+ * Smart Masterlayout
+ */
+
+@media (max-width: 979px) {
+  #smartbar{
+    display: none;
+  } 
+}
+
+// CONTENT
+// -------
+
+@media (max-width: 767px) {
+  #content{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: @baseLineHeight / 2;
+  }
+}
+
+.back-link{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: @baseLineHeight;
+  margin-top: -@baseLineHeight * 1.25;
+  margin-bottom: @baseLineHeight * 1.25;
+  
+  a{
+    color: @grayDark; 
+  }
+}
+
+.page-leader{
+  margin-top: 0;
+  margin-bottom: @baseLineHeight;
+
+  h1{
+    #font > .sans-serif(48px, 300, @baseLineHeight*2.25);
+    color: @smartred;
+    margin-top: 0;
+    margin-bottom: @baseLineHeight*1;
+    a{
+      color: @smartred;
+    }
+    
+    &.muted, &.muted a,
+    .muted, .muted a{
+      color: @grayLight;
+    }
+  }
+}
+
+p.lead{ /* Move to SMartstrap */
+  #font > .sans-serif(24px, 300, @baseLineHeight * 1.5);
+  font-size: 26px;
+  margin: 0;
+} 
+
+@media (max-width: 767px) {
+  .page-leader{
+  
+    margin: @baseLineHeight * 1 auto @baseLineHeight;
+
+    h1{
+      #font > .sans-serif(32px, normal, @baseLineHeight*1.5);
+      margin-bottom: @baseLineHeight * 1;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+

@@ -1,0 +1,44 @@
+/*!
+ * SMart Master
+ *
+ * Default view for pages (applied to any pages)
+ */
+
+body.page #content{
+  
+  .last-modified{
+    display: block;
+    margin-top: -@baseLineHeight;
+    margin-bottom: @baseLineHeight * 0.66;
+    color: @gray;
+    font-size: @baseFontSize * 0.96;
+    
+    @media (max-width: 768px){
+    
+      margin-top: -@baseLineHeight * 1;
+    
+    }
+  }
+  
+  .article > h1:first-child {
+    margin-top: 2px;
+  }
+  
+  .article > h2:first-child {
+    margin-top: 8px;
+  }
+  
+  .article > h3:first-child {
+    margin-top: 4px;
+  }
+  
+  .article > p:first-child {
+    margin-top: 10px;
+  }
+  
+  .article .nav{
+    margin-top: @baseLineHeight * 0.5;
+  }
+
+}
+

@@ -1,0 +1,60 @@
+/*!
+ * View: Blog single
+ *
+ * Styling for the blog single article
+ *
+ */
+ 
+body.single-post{
+  
+  .featured-image {
+    margin-bottom: @baseLineHeight * 2;
+  }
+  
+  @media (max-width: 767px){
+      
+    #content{
+      margin-top: @baseLineHeight;
+    }
+    
+  }
+}
+
+.blog-entry{ /* TODO: Move to components theme */
+  
+  margin-bottom: @baseLineHeight * 1;
+  position: relative;
+  
+  .page-leader{
+    margin-bottom: @baseLineHeight * 1;
+
+    h1{
+      margin-top: 0;
+      margin-bottom: @baseLineHeight*0.5;
+    }
+    .date{
+      display: block;
+      color: @gray;
+      font-size: 14px;
+      line-height: @baseLineHeight * 0.75;
+    }
+  }
+  
+  footer{
+    margin: @baseLineHeight * 2 0 @baseLineHeight;    
+  }
+  
+  @media (max-width: 767px){
+        
+    .page-leader{
+      margin-top: 0;
+      margin-bottom: @baseLineHeight * 0.75;
+    }
+    
+    footer{
+      display: none;
+    }
+    
+  }
+
+}

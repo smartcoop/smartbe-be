@@ -1,0 +1,86 @@
+.page-template-page-languages-php {
+  
+  .language-column {
+    margin: 20px;
+    
+    &.language-column-left {
+      text-align: right;
+      margin-left: 80px;
+    }
+    
+    &.language-column-right {
+      text-align: left;
+      margin-right: 80px;
+    }
+    
+    h1 {
+      font-size: 36px;
+      font-family: @serifFontFamily;
+      line-height: @baseLineHeight * 1.5;
+      color: @black;
+      margin-bottom: 12px;
+    }
+    
+    p {
+      font-size: 18px;
+      line-height: @baseLineHeight * 1.5;
+    }
+    
+  }
+  
+  @media (min-width: 768px) and (max-width: 979px) {
+    
+    #masterhead #primary-nav-toggle {
+      display: none !important;
+    }
+    
+    .language-column {
+      
+      &.language-column-left {
+        margin-left: 20px;
+      }
+      
+      &.language-column-right {
+        margin-right: 20px;
+      }
+      
+    }
+    
+  }
+  
+  @media (max-width: 767px) {
+    
+    #masterhead #primary-nav-toggle,
+    #masterfooter-topmenu {
+      display: none !important;
+    }
+    
+    .language-column {
+      margin: 24px 0;
+      
+      &.language-column-left {
+        text-align: center;
+        margin-left: 0;
+      }
+      
+      &.language-column-right {
+        text-align: center;
+        margin-right: 0;
+      }
+      
+      h1 {
+        font-size: 36px;
+        line-height: @baseLineHeight * 1.5;
+        margin-bottom: 12px;
+      }
+      
+      p {
+        font-size: 16px;
+        line-height: @baseLineHeight * 1;
+      }
+      
+    }
+    
+  }
+  
+}

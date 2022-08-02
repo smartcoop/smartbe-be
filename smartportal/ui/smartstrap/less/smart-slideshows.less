@@ -1,0 +1,139 @@
+/*!
+ * Slideshows
+ */
+
+.slideshow-container{
+  zoom: 1;
+  position: relative;
+  margin-bottom: @baseLineHeight * 1.5;
+  
+  a:active, 
+  a:focus{
+    outline: none;
+  }
+  
+  .flex-control-nav {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    
+    li {
+      margin: 0 3px;
+      list-style: none;
+      display: inline-block;
+      zoom: 1;
+      *display: inline;
+      a {
+        .square(9px);
+        display: block;
+        cursor: pointer;
+        background: white;
+        text-indent: -999em;
+        .border-radius(50%);
+        border: 2px solid @textColor;
+      }
+      a:hover {
+        background: @grayLight;
+      }
+      a.active {
+        background: @textColor;
+      }
+    }
+  }
+  
+  .flex-direction-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 0;
+    li a {
+      width: 52px;
+      height: 52px;
+      margin: -13px 0 0;
+      display: block;
+      background: url(theme/bg_direction_nav.png) no-repeat;
+      position: absolute;
+      top: 50%;
+      cursor: pointer;
+      text-indent: -999em;
+    }
+    li .next {
+      background-position: -52px 0;
+      right: -21px;
+    }
+    li .prev {
+      left: -20px;
+    }
+    li .disabled {
+      opacity: .3;
+      filter: ~"alpha(opacity=30)";
+      cursor: default;
+    }
+  }
+  
+  .flex-pauseplay span {
+    text-transform: capitalize;
+  }
+}
+
+.slideshow{
+  
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  zoom: 1;
+
+  > ol {
+    margin:  0;
+    padding:  0;
+    list-style:  none !important;
+    zoom:  1;
+    .clearfix();
+    > li {
+      display: none;
+      -webkit-backface-visibility: hidden;
+      position: relative;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+  
+  .flex-caption {
+    background: none;
+    background: rgba(0,0,0,0.3);
+    -ms-filter: ~"progid: DXImageTransform.Microsoft.gradient(startColorstr=#4c0000 00,endColorstr=#4c0000 00)";
+    filter: ~"progid: DXImageTransform.Microsoft.gradient(startColorstr=#4c0000 00,endColorstr=#4c0000 00)";
+    zoom: 1;
+    width: 96%;
+    padding: 2%;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+    font-size: 14px;
+    line-height: 18px;
+  }
+  
+}
+
+html[xmlns] .slides {
+  display: block;
+}
+* html .slides {
+  height: 1%;
+}
+.no-js .slides > li:first-child {
+  display: block;
+}
+

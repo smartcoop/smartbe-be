@@ -1,0 +1,465 @@
+/*!
+ * SMart Portal Theme > Components
+ *
+ * Styling or overides for components specific to SMart Portal
+ *
+ */
+
+/* POSTS LIST */
+
+.post-list {
+  list-style: none;
+  margin: 0;
+
+  li {
+    margin: (@baseLineHeight * 0.25) 0 (@baseLineHeight * 0.75);
+  }
+  
+  span {
+    display: block;
+    color: @gray;
+    font-size: 14px;
+  }
+
+  a {
+    display: block;
+    font-weight: 500;
+    color: @smartred;
+  }
+}
+
+
+/* Facebook like Box */
+
+.fb-like-box.fb_iframe_widget span{
+  overflow: hidden;
+  background: white;
+  border: 1px solid @grayLighter;
+  vertical-align: top;
+}
+
+/* Responsive Facebook like box */
+.fb-like-box.fb_iframe_widget, .fb-like-box.fb_iframe_widget span, .fb-like-box.fb_iframe_widget span iframe[style] {
+  width: 100% !important;
+}
+
+/* NAV COMPONENTS */
+
+.nav-chevron li ul{
+  display: none;
+}
+.nav-chevron li.current-menu-ancestor ul,
+.nav-chevron li.current-menu-item ul{
+  display: block;
+}
+
+.nav-chevron .divider {
+  position: relative;
+  margin-bottom: 30px;
+  
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(216, 215, 212, 0)), color-stop(50%, #D8D7D4), color-stop(100%, rgba(216, 215, 212, 0)));
+  }
+  
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, #FFF), color-stop(100%, rgba(255, 255, 255, 0)));
+  }
+  
+}
+
+.nav-subpages{
+  margin: @baseLineHeight 0;  
+  .nav-chevron a{
+    color: @black; 
+  }
+}
+
+/* NAV PROJECTS */
+
+#nav-projects{
+
+  margin-top: -@baseLineHeight * 0.5;
+  
+  > ul{
+    list-style: none;
+    
+    h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+    
+    > li{
+      text-align: left;
+      margin-right: -4px;
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+      
+      ul{
+        margin-bottom: -@baseLineHeight * 0.25;
+      }
+      
+      > h2{
+        text-align: center;
+        font-size: 22px;
+        line-height: @baseLineHeight * 1;
+        margin-bottom: @baseLineHeight / 2;
+        a{
+          color: @textColor;
+        }
+      }
+      
+      > .picture{
+        display: block;
+        margin-bottom: @baseLineHeight / 2;
+        margin-top: @baseLineHeight / 2;
+        img{
+          vertical-align: top;
+        }
+      }
+    }
+  }
+  .nav-chevron > li {
+    margin-bottom: @baseLineHeight / 2;
+  }
+  .nav-chevron > li > a {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  #nav-projects > ul > li{
+    position: relative;
+    padding-top: 0 !important;
+    //padding-right: 105px;
+
+    &:before{
+      display: block;
+      content: '';
+      width: 100px;
+      height: 110px;
+      float: right;
+    }
+
+    > h2{
+      font-size: 24px;
+      margin-left: 0;
+      margin-bottom: @baseLineHeight*0.5;
+      padding: 10px 0 0 0;
+      position: relative;
+      text-align: left;
+      width: auto;
+    }
+    
+    > .picture{
+      max-width: 90px;
+      position: absolute;
+      top: @baseLineHeight / 2;
+      right: 0;
+      margin: 0;
+    }
+    
+    > p{
+      font-size: @baseFontSize !important;
+      margin-left: 0;
+      padding-left: 0;
+    }
+    
+    ul{
+      margin-left: 0;
+      margin-top: @baseLineHeight * 0.5;
+      margin-bottom: @baseLineHeight * 0.5;
+      li{
+        position: relative;
+        border-color: @grayLight;
+        
+        &:last-child{
+          border-bottom: 0;
+        }
+        a{
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px){
+  #nav-projects > ul > li{
+    position: relative;
+    padding-left: 105px;
+    min-height: 90px;
+    > .picture{
+      max-width: 90px;
+      position: absolute;
+      left: 0;
+      top: @baseLineHeight / 2;
+      margin: 0;
+    }
+    
+    &:before{
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  #nav-projects > ul > li{
+    p{
+      font-size: 13px;
+      line-height: @baseLineHeight * 1;
+    }
+    h2{
+      font-size: 20px;
+      line-height: @baseLineHeight * 1;
+    }
+  }
+}
+
+.projects-list-expanded{
+
+  .project-type{
+    background: 60px top no-repeat;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .invoicing{background-image: url(../img/projects-invoicing.png);}
+  .financial{background-image: url(../img/projects-financial.png);}
+  .accompaniment{background-image: url(../img/projects-accompaniment.png);}
+  .career-development{background-image: url(../img/projects-career-development.png);}
+
+  .project-type-title{
+    font-family: @serifFontFamily;
+    font-size: 36px;
+    line-height: @baseLineHeight * 1.5;
+    margin-top: 0;
+    margin-bottom: @baseLineHeight * 0.5;
+  }
+
+  .project-type-desc{
+    color: @grayDark;
+    font-size: 16px;
+    line-height: @baseLineHeight;
+    margin-bottom: 18px;
+  }
+
+  .projects-list {
+    margin-bottom: -24px;
+  }
+
+  .single-project{
+    list-style: none;
+    margin-bottom: 18px;
+    padding: 0;
+
+    &.even{
+      clear: left; 
+    }
+  }
+ 
+  .project-title{
+    color: @smartred;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: @baseLineHeight;
+    margin: 0 0 14px 0;
+  }
+
+  .project-excerpt{
+    color: @black;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 0;
+  }
+
+  .read-more{
+    color: @black;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 767px){
+  .projects-list-expanded{
+    .project-type{
+      background: none;
+      margin: 18px 0 30px 0;
+    }
+  }
+}
+
+.blog-post{
+  position: relative;
+  .border-radius(5px);
+  .box-sizing(border-box);
+  background: @white;
+  margin-bottom: @gridGutterWidth;
+  padding: 25px 30px 30px 30px;
+  height: 146px;
+  
+  &.sticky{
+    height: 322px
+  }
+
+  .post-link{
+    display: block;
+    height: 100%;
+    text-decoration: none;
+  }
+
+  .post-date,
+  .post-title{
+    margin: 0;
+  }
+  
+  .post-date{
+    color: @smartred;
+    #font > .sans-serif(14px, normal, @baseLineHeight);
+    margin-bottom: 2px;
+  }
+
+  .post-title{
+    color: @black;
+    #font > .serif(18px, normal, @baseLineHeight);
+    max-height: @baseLineHeight * 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .post-picture{
+    height: 146px;
+    width: 230px;
+    margin-bottom: 30px;
+    border: none;
+  }
+}
+
+.block-link{
+  display: block;
+
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.team-member{
+  margin-bottom: 30px;
+  
+  .portrait {
+    border-bottom: 3px solid @smartred;
+    display: block;
+    width: 100%;
+    color: @grayLight;
+    text-align: center;
+    vertical-align: center;
+    background: @grayLight;
+  }
+  
+  & > div{
+    border: 1px solid @offWhite;
+    padding-bottom: 12px;
+    
+    & > * {
+      padding: 0 15px;
+    }
+    
+    hgroup{
+      padding-top: 8px;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+      background: @offWhite;
+      
+      h1 {
+        font-size: 22px;
+        line-height: @baseLineHeight;
+        font-weight: bold;
+        padding-bottom: 6px;
+        margin: 0;
+      }
+      
+      h2 {
+        font-size: 13px;
+        line-height: @baseLineHeight;
+        margin: 0;
+        margin-top: -6px;
+      }
+    }
+    
+    p {
+      margin: 0;
+      margin-top: 0;
+      font-size: 14px;
+    }
+    
+    h3 {
+      font-weight: bold;
+      font-size: 12px;
+      margin-top: 6px !important;
+      margin-bottom: 0 !important;
+      line-height: @baseLineHeight * .75;
+      color: @grayDark;
+    }
+    
+    h3 + p {
+      color: @grayDark;
+      font-size: 12px;
+      line-height: @baseLineHeight * .75;
+    }
+  }
+}
+
+/** WIDGETS COL **/
+
+.widgets-col{
+  
+  .widget h3{
+    text-align: center;
+    line-height: @baseLineHeight;
+  }
+  
+  .widget:first-child h3{
+    margin-top: 0; 
+  }
+  
+  .well{
+    margin-bottom: @baseLineHeight / 2;
+  }
+  
+  hr:last-child{
+    display: none; 
+  }
+  
+  @media (max-width: 767px){
+    .widget{
+      margin: @baseLineHeight * 1.25 0 @baseLineHeight * 1.25;
+    }
+    .widget:first-child{
+      margin-top: 0;
+    }
+    .widget:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+}
+
+/** Facebook share widget**/
+
+.fb_iframe_widget {
+  line-height: 100%;
+}

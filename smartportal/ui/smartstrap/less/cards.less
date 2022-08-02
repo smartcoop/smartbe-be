@@ -1,0 +1,414 @@
+/**
+ * -----------------------------------------------------------------------------
+ * Notes
+ * -----------------------------------------------------------------------------
+ * 
+ * BEM naming convention:
+ * .block {}
+ * .block__element {}
+ * .block--modifier {}
+ * 
+ * SMACSS property groups:
+ * 1. Box
+ * 2. Border
+ * 3. Background
+ * 4. Text
+ * 5. Other
+ */
+
+/**
+ * -----------------------------------------------------------------------------
+ * Cards: base
+ * -----------------------------------------------------------------------------
+ */
+.card,
+.card li {
+  font-size: 13px;
+  line-height: @baseLineHeight * .75;
+}
+
+.card {
+  margin-bottom: @baseLineHeight;
+  .clearfix;
+}
+
+.card--collapsable {
+  cursor: pointer;
+}
+
+// Main block
+.card__main {
+  position: relative;
+  border: 1px solid @grayLighter;
+  .border-radius(4px);
+  background-color: @white;
+  
+  & > a {
+    display: block;
+    color: @black;
+    text-decoration: none;
+  }
+}
+
+.card__main--unstyled {
+  border: none;
+  .border-radius(0);
+  background-color: transparent;
+}
+
+// Common elements
+.card__header,
+.card__body,
+.card__footer {
+  padding-right: 20px;
+  padding-left: 20px;
+  .clearfix;
+}
+
+.card__footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid @grayLighter;
+}
+
+.card__image {
+  margin-bottom: (@baseLineHeight / 4);
+  
+  & > img {
+    .border-radius(3px 3px 0 0);
+  }
+}
+
+.card__title,
+.card__subtitle {
+  font-size: 20px;
+  line-height: @baseLineHeight;
+}
+
+.card__title {
+  margin: (@baseLineHeight / 4) 0;
+  font-weight: 500;
+}
+
+a:hover .card__title {
+  text-decoration: underline;
+}
+
+.card__subtitle {
+  margin: -(@baseLineHeight / 4) 0 (@baseLineHeight / 4) 0;
+  color: #878278;
+  font-weight: 300;
+}
+
+.card__metadata {
+  color: @grayDark;
+}
+
+.card__edit-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  visibility: hidden;
+  z-index: 10;
+}
+
+.card__main:hover .card__edit-btn {
+  visibility: visible;
+}
+
+// User block and elements
+.card__user {
+  margin-top: 10px;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  
+  & > a {
+    color: @grayDark;
+    text-decoration: none;
+  }
+  
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+  }
+  
+  strong {
+    color: @red;
+    font-weight: normal;
+  }
+  
+  & > a:hover strong {
+    text-decoration: underline;
+  }
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * Cards: biography
+ * -----------------------------------------------------------------------------
+ */
+.card--biography,
+.card--biography li {
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * Cards: contact
+ * -----------------------------------------------------------------------------
+ */
+#map-canvas {
+  width: 100%;
+  height: 160px;
+}
+
+.user-contact-info {
+  margin-bottom: @baseLineHeight / 4;
+  .content-columns(2);
+  
+  li {
+    margin-bottom: @baseLineHeight / 4;
+  }
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * Cards: introduction
+ * -----------------------------------------------------------------------------
+ */
+.card--introduction,
+.card--introduction li {
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * Cards: publications
+ * -----------------------------------------------------------------------------
+ */
+.card--publication {
+  // Sections
+  .card__header,
+  .card__body,
+  .card__footer {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+.card--publication--campaign .card__footer {
+  border-top: none;
+  .border-radius(0 0 3px 3px);
+  background-color: @offWhite;
+  color: @grayDark;
+  
+  strong {
+    color: @black;
+    font-weight: normal;
+  }
+}
+
+.campaign-progress,
+.campaign-progress__bar {
+  height: 6px;
+  .border-radius(3px);
+}
+
+.campaign-progress {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: @grayLighter;
+}
+
+.campaign-progress__bar {
+  background-color: #00bb55;
+}
+
+.campaign-pct-funded,
+.campaign-amount-raised,
+.campaign-days-left {
+  width: 33.333%;
+  float: left;
+}
+
+.campaign-amount-raised {
+  text-align: center;
+}
+
+.campaign-days-left {
+  text-align: right;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * Cards: user
+ * -----------------------------------------------------------------------------
+ */
+.card--user,
+.card--user li {
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+}
+  
+.card--user {
+  .card__user,
+  .card__main,
+  .card__gallery {
+    float: left;
+  }
+  
+  .card__user {
+    width: 90px;
+    margin-top: 0;
+    
+    .user-avatar {
+      width: auto;
+      height: auto;
+      margin-bottom: 2px;
+    }
+    
+    .btn {
+      margin-bottom: @baseLineHeight / 2;
+    }
+    
+    li {
+      margin-top: @baseLineHeight / 4;
+      padding-top: @baseLineHeight / 4;
+      border-top: 1px solid @grayLighter;
+      color: @grayDark;
+      font-size: 11px;
+      line-height: 13px;
+      text-transform: uppercase;
+      
+      &:first-child {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+      }
+      
+      strong {
+        display: block;
+        color: @black;
+        font-weight: bold;
+      }
+    }
+  }
+  
+  .card__main {
+    width: 250px;
+    margin-left: 30px;
+    
+    // Large desktops
+    @media (min-width: 1200px) {
+      width: 350px;
+    }
+  }
+  
+  .card__header,
+  .card__body {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  
+  .card__title,
+  .card__metadata {
+    margin: 0 0 (@baseLineHeight / 4);
+  }
+  
+  .card__title {
+    font-weight: bold;
+    font-size: @baseFontSize;
+  }
+  
+  .card__gallery {
+    width: 290px;
+    margin-left: 30px;
+    
+    // Large desktops
+    @media (min-width: 1200px) {
+      width: 370px;
+    }
+    
+    ul {
+      display: inline-block;
+      margin: 0;
+      position: relative;
+      .border-radius(5px);
+      overflow: hidden;
+      .clearfix;
+      
+      & > li {
+        width: 210px;
+        height: 210px;
+        margin-left: -170px;
+        float: left;
+        position: relative;
+        .border-radius(5px);
+        background-color: @grayLight;
+        .box-shadow(0 0 5px rgba(0, 0, 0, .8));
+        overflow: hidden;
+        
+        // Large desktops
+        @media (min-width: 1200px) {
+          width: 270px;
+          height: 270px;
+          margin-left: -220px;
+        }
+        
+        &:first-child {
+          margin-left: 0;
+          z-index: 3;
+        }
+        
+        &:nth-child(2) {
+          z-index: 2;
+        }
+        
+        &:nth-child(3) {
+          z-index: 1;
+        }
+        
+        &:last-child {
+          .box-shadow(0 0 0 rgba(0, 0, 0, 0));
+        }
+      }
+    }
+    
+    ul:after {
+      width: 100%;
+      height: 210px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, .5);
+      .border-radius(5px);
+      color: @white;
+      font-size: 13px;
+      line-height: 210px;
+      text-align: center;
+      text-transform: uppercase;
+      text-overflow: ellipsis;
+      content: attr(data-text);
+      opacity: 0;
+      overflow: hidden;
+      .transition(opacity .5s);
+      white-space: nowrap;
+      z-index: 4;
+      
+      // Large desktops
+      @media (min-width: 1200px) {
+        height: 270px;
+        line-height: 270px;
+      }
+    }
+    
+    a:hover ul:after {
+      opacity: 1;
+    }
+  }
+}
